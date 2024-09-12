@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 16px;
+    font-family: 'OpenSans', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    max-width: 1400px;
+}
+
+.kap{
+    padding: 0.5em;
+}
+
+@import "./components/kap-table/kap-table.css";
+@import "./components/quill-ta/quill-ta.css";

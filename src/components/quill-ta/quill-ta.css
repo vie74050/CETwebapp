@@ -1,0 +1,16 @@
+/* textarea */
+.textarea-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+}
+
+.learner {
+    background-color:  rgb(233, 250, 255);
+}
+p.instructions {
+    padding: 0 1em;
+}   
+.textarea {
+    background-color: white;
+}

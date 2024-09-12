@@ -1,0 +1,48 @@
+/* kap-tabe */
+.kap-table {
+    width: 100%;
+    margin: 1em auto;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    counter-reset: rowNumber;
+}
+
+.kap-table th, .kap-table td {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    width: 12.5%;
+    vertical-align: text-top;
+}
+.kap-table th:first-child,
+.kap-table td:first-child {
+    width: 25%;
+}
+.kap-table th {
+    font-size: 10px;
+    font-weight: lighter;
+    line-height: 1.5em;
+}
+.kap-table tr:first-child th {
+    background-color: #f0f0f0;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1em;
+    position: sticky;
+    top: 0;
+}
+.kap-table tbody tr {
+    counter-increment: rowNumber;
+}
+.kap-table tbody>tr td:first-child {
+    padding-left: 2em;
+    position: relative;
+}
+.kap-table tbody>tr td:first-child::before {
+    content: counter(rowNumber);
+    min-width: 1em;
+    display: block;
+    position: absolute;
+    left: 0.5em;
+}
