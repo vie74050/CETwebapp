@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: "./src/app.ts",
+  entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "bundle.js",
@@ -19,16 +19,19 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader,"style-loader", "css-loader"],
+        use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+        exclude: /node_modules/
+      }
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       inject: "body",
       template: "src/index.html",
-    }),
-    new MiniCssExtractPlugin({
-        filename:"bundle.css"})
+    })
   ],
 };
