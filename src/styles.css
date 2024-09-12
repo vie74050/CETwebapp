@@ -11,8 +11,15 @@ body {
     max-width: 1400px;
 }
 
-.kap{
-    padding: 0.5em;
+.kap {
+    margin: 0 auto;
+    padding: 1.5em 1em;
+    border-bottom: 1px dashed #ccc;
+}
+.kap h1 {
+    margin-top: 1.5em;
+    font-size: 1.3em;
+    text-transform: capitalize;
 }
 
 @import "./components/kap-table/kap-table.css";

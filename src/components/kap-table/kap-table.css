@@ -1,5 +1,6 @@
 /* kap-tabe */
 .kap-table {
+    table-layout: fixed;
     width: 100%;
     margin: 1em auto;
     border-collapse: collapse;
@@ -11,8 +12,7 @@
 
 .kap-table th, .kap-table td {
     padding: 0.5em;
-    border: 1px solid #ccc;
-    width: 12.5%;
+    border: 1px solid #ccc; 
     vertical-align: text-top;
 }
 .kap-table th:first-child,
@@ -32,17 +32,29 @@
     position: sticky;
     top: 0;
 }
-.kap-table tbody tr {
-    counter-increment: rowNumber;
+.kap-table tbody tr.subhead {
+    font-size: smaller;
+    color: #333;
+    background-color: #f0f0f0;
+    text-transform: uppercase;
 }
-.kap-table tbody>tr td:first-child {
+.kap-table tbody tr.subhead td {
+    border-right: none;
+}
+.kap-table tbody tr:not(.subhead) {
+    counter-increment: rowNumber;
+    height: 5em;
+}
+.kap-table tbody>tr:not(.subhead) td:first-child {
     padding-left: 2em;
     position: relative;
 }
-.kap-table tbody>tr td:first-child::before {
+.kap-table tbody>tr:not(.subhead) td:first-child::before {
     content: counter(rowNumber);
+    font-size: 0.8em;
     min-width: 1em;
     display: block;
     position: absolute;
     left: 0.5em;
+    top: 25%;
 }
