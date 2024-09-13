@@ -24,9 +24,11 @@
     "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "build": "webpack --mode production",
+    "template": "node _KAPtemplates/buildTemplate.js",
+    "build": "webpack --mode production && npm run template",
     "dev": "webpack --mode development",
     "watch": "webpack --mode development --watch"
+    
   },
   "license": "MIT"
 }
