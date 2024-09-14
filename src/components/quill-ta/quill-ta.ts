@@ -5,6 +5,8 @@ import Snow from "quill/themes/snow";
 import Bold from "quill/formats/bold";
 import Italic from "quill/formats/italic";
 import Header from "quill/formats/header";
+import List from "quill/formats/list";
+
 
 Quill.register({
   "modules/toolbar": Toolbar,
@@ -12,6 +14,7 @@ Quill.register({
   "formats/bold": Bold,
   "formats/italic": Italic,
   "formats/header": Header,
+  "formats/list": List,
 });
 
 function InitQuillEditors() {

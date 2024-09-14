@@ -17,7 +17,7 @@ Expected form structure:
 >- Midterm Evaluation Instructions
 >- Final Evaluation Instructions
 >
->KPA1-7
+>KPA1-7 (8)
 >
 >- CPI table
 >- Learning text area for Midterm and Final Comments
@@ -29,7 +29,7 @@ Expected form structure:
 >Signatures  
 
 See the dev helper `_KAPtemplates` for creating the HTML template pages.  
-The templates pages body content will contain only the KAP CPI tables, which are be editable in LH so faculty can customize KAP text and identify which column cells should be shaded to indicate the target CPI grade.
+The templates pages' body content will contain only the KAP CPI tables, which will be editable in LH so faculty can customize KAP text and identify which column cells should be shaded to indicate the target CPI grade.
 
 ## 3rd party libraries & frameworks
 

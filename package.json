@@ -1,8 +1,8 @@
 {
   "name": "cetapp",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "Quill webpack example",
+  "description": "CET Form",
   "main": "cetapp.js",
   "dependencies": {
     "quill": "2.0.0-rc.3"

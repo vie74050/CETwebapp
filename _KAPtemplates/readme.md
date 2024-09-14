@@ -11,7 +11,7 @@ Helper node functions to create tempaltes for LH.
 <tbody>
     <!-- each cpi tr row should have 7 td columns unless -->
   <tr>
-    <td>Processes assessment data to determine priority cues.</td>
+    <td>CPI question text</td>
     <td></td>
     <td></td>
     <td></td>

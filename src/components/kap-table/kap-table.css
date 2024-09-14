@@ -8,6 +8,7 @@
     font-size: 14px;
     border: 1px solid #ccc;
     counter-reset: rowNumber;
+    page-break-after: always;
 }
 
 .kap-table th, 
@@ -36,13 +37,13 @@
 }
 .kap-table tr:nth-child(2) th:hover {
     cursor: pointer;
-    font-size: 12px;
 }
 .kap-table tbody tr.subhead {
     font-size: smaller;
     color: #333;
     background-color: #f0f0f0;
     text-transform: uppercase;
+    page-break-after: avoid;
 }
 .kap-table tbody tr.subhead td {
     border-right: none;
