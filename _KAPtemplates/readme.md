@@ -45,4 +45,10 @@ For building html template files based off of `./dist/index.html` using node, ru
 
 node _KAPtemplates/buildTemplate.js
 
+or 
+
+npm run template
+
 ```
+
+- CLI prompt to select which templates to include
