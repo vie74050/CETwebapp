@@ -3,18 +3,31 @@
     display: flex;
     flex-direction: column;
     padding: 1em 0;
+    margin-block-end: 1em;
 }
 .textarea h5{
     margin-block-end: 0;
     padding: 0 1em;
 }
-.learner {
-    background-color:  rgb(233, 250, 255);
-    outline: 1px solid rgb(0, 142, 185);
-}
+
 p.instructions {
     padding: 0 1em;
 }   
 .textarea .editor{ 
     background-color: white;
+}
+
+.learner {
+    background-color:  rgb(233, 250, 255);
+    outline: 1px solid rgb(0, 142, 185);
+}
+
+.ci {
+    background-color: rgb(216 243 219);
+    outline: 1px solid rgb(92 172 38);
+}
+
+.faculty {
+    background-color: rgb(242 219 219);
+    outline: 1px solid rgb(250 137 137);
 }

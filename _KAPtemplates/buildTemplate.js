@@ -23,7 +23,7 @@ try {
   var kap_template = src_index.match(
     /<section class="kap">[\s\S]*?<\/section>/g
   )[0];
-  console.log("kap_template", kap_template);
+  //console.log("kap_template", kap_template);
   
   var new_index = src_index.replace(
     /<section class="kap">[\s\S]*?<\/section>/g,

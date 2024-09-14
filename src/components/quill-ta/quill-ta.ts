@@ -14,17 +14,9 @@ Quill.register({
   "formats/header": Header,
 });
 
-/** Creates kap learner text area with the format from quill-ta-learner.html
- * @param parent - the parent element to which the text area will be appended 
- */
-
-
-function QuillTA_L(parent: HTMLElement) {
-  const quill_ta_html = require("../quill-ta/quill-ta-learner.html").default;   
-  parent.insertAdjacentHTML("beforeend", quill_ta_html);
-
+function InitQuillEditors() {
   // get the .editor element and create a new Quill instance
-  const editors = parent.querySelectorAll(".editor") ;
+  const editors = document.querySelectorAll(".editor") ;
 
   if (editors === null) {
     throw new Error("No .editor element found in the parent element");
@@ -44,7 +36,6 @@ function QuillTA_L(parent: HTMLElement) {
       }); 
     });
   }
-  
 }
 
-export default QuillTA_L;
+export default InitQuillEditors;

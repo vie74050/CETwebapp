@@ -10,7 +10,8 @@
     counter-reset: rowNumber;
 }
 
-.kap-table th, .kap-table td {
+.kap-table th, 
+.kap-table td {
     padding: 0.5em;
     border: 1px solid #ccc; 
     vertical-align: text-top;
@@ -20,7 +21,7 @@
     width: 25%;
 }
 .kap-table th {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: lighter;
     line-height: 1.5em;
 }
@@ -31,6 +32,11 @@
     line-height: 1em;
     position: sticky;
     top: 0;
+    z-index: 10;
+}
+.kap-table tr:nth-child(2) th:hover {
+    cursor: pointer;
+    font-size: 12px;
 }
 .kap-table tbody tr.subhead {
     font-size: smaller;
@@ -43,7 +49,7 @@
 }
 .kap-table tbody tr:not(.subhead) {
     counter-increment: rowNumber;
-    height: 5em;
+    height: 6em;
 }
 .kap-table tbody>tr:not(.subhead) td:first-child {
     padding-left: 2em;
