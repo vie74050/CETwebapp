@@ -27,9 +27,14 @@
   },
   "scripts": {
     "template": "node _KAPtemplates/buildTemplate.mjs",
-    "build": "webpack --mode production && npm run template",
+    "buildall": "webpack --mode production && npm run template",
+    "build": "webpack --mode production",
     "dev": "webpack --mode development",
     "watch": "webpack --mode development --watch"
+  },
+  "engines": {
+    "npm": ">=8.6.0",
+    "node": ">=20.11.1"
   },
   "license": "MIT"
 }

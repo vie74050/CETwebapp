@@ -41,6 +41,8 @@ Reference: [https://github.com/quilljs/webpack-example]
 
 ## Development Usage
 
+Node version `nvm use 20.11.1`.
+
 Install dependencies:
 
 ```bash
@@ -51,18 +53,24 @@ Build the code:
 
 ```bash
 npm run dev
+
+or
+
+npm run build 
 ```
+
+The code will be build `bundle.js` and `index.html` to the `dist` directory.
 
 Create Templates:
 
 ```node
-
 npm run template /*KAP create templates only*/
-
-npm run build /*build app and templates*/
 ```
 
-The code will be built to the `dist` directory. Open `dist/index.html` in a browser to see the result.
+The code will build the `template.html` to the `dist` directory, which combines the selected pages from `_KAPtemplates` into `dist/index.html`.  
+Rename this file to the appropriate course (i.e. NSCC7420).  This is the file that can be uploaded to LH, where SMEs can edit text and add the `*` indicator to the table cell that is to be shaded.
+
+Can do `npm run buildall` to run both steps.
 
 ### License
 
