@@ -21,22 +21,25 @@
 .kap-table td:first-child {
     width: 25%;
 }
+
 .kap-table th {
     font-size: 9px;
     font-weight: lighter;
     line-height: 1.5em;
+}
+.kap-table tr {
+    page-break-inside: avoid;
 }
 .kap-table tr:first-child th {
     background-color: #f0f0f0;
     font-size: 12px;
     font-weight: bold;
     line-height: 1em;
-    position: sticky;
-    top: 0;
-    z-index: 10;
 }
 .kap-table tr:nth-child(2) th:hover {
     cursor: pointer;
+    font-size: 14px;
+    line-height: 15px;
 }
 .kap-table tbody tr.subhead {
     font-size: smaller;

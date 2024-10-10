@@ -1,0 +1,36 @@
+header {
+    position: sticky;
+    background-color: white;
+    color: rgb(0 62 107);
+    top:0;
+    z-index: 10;
+    margin: auto;
+    border-bottom: 1px solid rgb(0 62 107);
+}
+header .title{
+    font-size: 2em;
+    display: flex;
+    text-align: center;
+    margin: auto;
+}
+header .title span{
+    margin: auto;
+    flex-grow: 5;
+}
+header .title img {
+    width: min-content;
+    flex-grow: unset;
+}
+header .toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 5px;
+    background-color: #ddd;
+    margin-bottom: 5px;
+}
+header .toolbar button{
+    font-size: large;
+    height: 1.7em;
+    cursor: pointer;
+}

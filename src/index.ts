@@ -1,19 +1,27 @@
 import "./styles.css";
 import InitQuillEditors from "./components/quill-ta/quill-ta";
+import Initheader from "./components/header/header";
 
-// add learner text areas to all elements with class .kap
-const _html = require("./components/quill-ta/quill-ta-learner.html").default;  
+Initheader();
+
+// Add general info form area after header
+const general_info_html = require("./components/staticpages/generalinfo.html").default;
+document.querySelector("header").insertAdjacentHTML("afterend", general_info_html);
+
+// Add learner text areas to all elements with class .kap
+const kap_ta_html = require("./components/quill-ta/quill-ta-learner.html").default;  
 document.querySelectorAll(".kap").forEach((el:HTMLElement) => {
-    el.insertAdjacentHTML("beforeend", _html);   
+    el.insertAdjacentHTML("beforeend", kap_ta_html);   
 });
 
-// add in comments pages after kap sections
+// Add sections after kap sections
 const quill_ta_comments_html = require("./components/quill-ta/quill-ta-comments.html").default;  
-document.querySelector(".kap:last-of-type").insertAdjacentHTML("afterend", quill_ta_comments_html);
+const signature_html = require("./components/staticpages/signatures.html").default;
 
+document.querySelector(".kap:last-of-type").insertAdjacentHTML("afterend", quill_ta_comments_html + signature_html);
 InitQuillEditors();
 
-// section h1 toggle show/hide section
+// Add page events: section h1 toggle show/hide section
 document.querySelectorAll("section>h1").forEach((el: HTMLElement) => {
     const parent = el.parentElement;
 
@@ -39,4 +47,15 @@ document.querySelectorAll("section>h1").forEach((el: HTMLElement) => {
     });
 
     
+});
+
+// Add page events: open parent section when child element is focused
+document.querySelectorAll("section *").forEach((el: HTMLElement) => {
+    el.addEventListener("focus", () => {
+        const parent = el.closest("section");
+        if (parent) {
+            parent.classList.add("open");
+            parent.style.height = "fit-content";
+        }
+    });
 });

@@ -49,9 +49,10 @@ Install dependencies:
 npm install
 ```
 
-Build the code:
+Build the code using webpack:
 
 ```bash
+
 npm run dev
 
 or

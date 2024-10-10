@@ -1,0 +1,39 @@
+.form p {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0.5em;
+}
+.form p label{
+    width:fit-content;
+    margin: 0.25em;
+}
+.form p label:first-child{
+    width:8em;
+}
+.form p input {
+    padding: 0.5em;
+}
+.form p input[type="text"] {
+    flex-grow: 1;    
+    margin-right: 0.5em;
+}
+.form p input[type="date"] {
+    width: 10em;
+}
+
+.form p.boxed{
+    justify-content: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+.form p.boxed label{
+    width: fit-content;
+    margin: auto;
+}
+.form p.boxed input[type="radio"] {    
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
+}
