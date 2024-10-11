@@ -15,17 +15,3 @@ p.instructions {
     background-color: white;
 }
 
-.learner {
-    background-color:  rgb(233, 250, 255);
-    outline: 2px solid rgb(0, 142, 185);
-}
-
-.ci {
-    background-color: rgb(216 243 219);
-    outline: 2px solid rgb(92 172 38);
-}
-
-.faculty {
-    background-color: rgb(242 219 219);
-    outline: 2px solid rgb(250 137 137);
-}

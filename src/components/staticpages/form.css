@@ -23,14 +23,18 @@
 }
 
 .form p.boxed{
-    justify-content: center;
+    text-align: left;
     background-color: #eee;
     border: 1px solid #ccc;
-    padding: 1em;
+    justify-content: flex-start;
 }
 .form p.boxed label{
     width: fit-content;
-    margin: auto;
+    margin: auto 1em auto 0;
+}
+.form p.boxed select {
+    width: auto;
+    height: 3em;
 }
 .form p.boxed input[type="radio"] {    
     width: 2em;

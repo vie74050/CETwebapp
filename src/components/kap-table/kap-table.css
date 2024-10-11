@@ -22,25 +22,19 @@
     width: 25%;
 }
 
-.kap-table th {
-    font-size: 9px;
-    font-weight: lighter;
-    line-height: 1.5em;
-}
 .kap-table tr {
     page-break-inside: avoid;
 }
-.kap-table tr:first-child th {
-    background-color: #f0f0f0;
-    font-size: 12px;
-    font-weight: bold;
+.kap-table th {
+    font-weight: lighter;
     line-height: 1em;
+    font-size: small;
 }
-.kap-table tr:nth-child(2) th:hover {
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 15px;
+.kap-table thead tr:first-child th {
+    background-color: #f0f0f0;
+    font-weight: bold;
 }
+
 .kap-table tbody tr.subhead {
     font-size: smaller;
     color: #333;
@@ -54,10 +48,12 @@
 .kap-table tbody tr:not(.subhead) {
     counter-increment: rowNumber;
     height: 6em;
+    outline: 2px solid #333;
 }
 .kap-table tbody>tr:not(.subhead) td:first-child {
     padding-left: 2em;
     position: relative;
+    line-height: 1.5em;
 }
 .kap-table tbody>tr:not(.subhead) td:first-child::before {
     content: counter(rowNumber);
@@ -67,4 +63,30 @@
     position: absolute;
     left: 0.5em;
     top: 25%;
+}
+.kap-table tbody td.target {
+    background-color: #b9cab0;
+}
+.kap-table tbody td .cpigrid {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+}
+
+.kap-table tbody td label {
+    display: inline-grid;
+    grid-template-columns: 50% auto;
+    text-align: center;
+    align-items:center;
+    width: 100%;
+}
+
+.kap-table tbody td input {
+    height: 2em;
+}
+
+.kap-table tbody td .comments {
+    border: 1px solid #ccc;
+    padding: 0.25em;
+    margin: 0;
 }

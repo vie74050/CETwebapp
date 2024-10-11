@@ -1,8 +1,10 @@
 import "./styles.css";
 import InitQuillEditors from "./components/quill-ta/quill-ta";
 import Initheader from "./components/header/header";
+import {InitCPISetup} from "./components/kap-table/kap-table";
 
 Initheader();
+InitCPISetup();
 
 // Add general info form area after header
 const general_info_html = require("./components/staticpages/generalinfo.html").default;

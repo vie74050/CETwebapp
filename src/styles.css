@@ -36,35 +36,90 @@ section>h1::after {
     content: '\25BC';
     float: right;
 }
+
 section.open>h1::after {
     content: '\25B2';
     float: right;
 }
 
+.learner {
+    background-color: rgb(233, 250, 255);
+    outline: 2px solid rgb(0, 142, 185);
+}
+
+.ci {
+    background-color: rgb(233, 248, 235);
+    outline: 2px solid rgb(132, 189, 94);
+}
+
+.faculty {
+    background-color: rgb(242 219 219);
+    outline: 2px solid rgb(250 137 137);
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    width: 120px;
+    top: -5px;
+    right: 105%;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
 
 @media print {
     body {
         max-width: 1400px;
+        font-size: 11px;
+    }
+
+    header {
+        position: relative;
     }
     /* TODO: does not work on mobile browsers... need mobile handling?*/
-    .toolbar {
+    header .toolbar,
+    .tooltip .tooltiptext,
+    div.ql-toolbar {
         display: none;
     }
+
     section.open>h1::after,
     section>h1::after {
         content: '';
     }
-    div.ql-toolbar {
-        display: none;
+
+    .kap-table tbody>tr>td {
+        font-size: 10px;
     }
-    .ql-toolbar.ql-snow + .ql-container.ql-snow {
+
+    .ql-toolbar.ql-snow+.ql-container.ql-snow {
         border-top: 0;
         border-bottom: 0;
     }
+
     section {
         height: fit-content !important;
     }
-   
+
+    .kap-table tbody td input {
+        height: 1em;
+    }
+
 }
 
 @import "./components/header/header.css";
