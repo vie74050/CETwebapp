@@ -12,15 +12,15 @@ export function InitSignaturePad() {
         facsignaturePad.clear();
     });
 
-    resizeCanvas(canvas, facsignaturePad);
+    //resizeCanvas(canvas, facsignaturePad);
 }
 
 function resizeCanvas(canvas: HTMLCanvasElement, facsignaturePad: SignaturePad) {
     const ratio =  Math.max(window.devicePixelRatio || 1, 1);
-    // set canvas offsetWidth to canvas width to 80% of parent element
+    // set canvas offsetWidth to canvas width to % of parent element
     
-    canvas.width = canvas.parentElement.offsetWidth * 0.8 * ratio;
-    canvas.height = 100 * ratio;
+    canvas.width = canvas.parentElement.offsetWidth * 0.7 * ratio;
+    canvas.height = 80 * ratio;
     canvas.getContext("2d").scale(ratio, ratio);
     facsignaturePad.clear(); // otherwise isEmpty() might return incorrect value
 }
