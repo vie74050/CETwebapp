@@ -12,7 +12,7 @@ export function InitSignaturePad() {
         facsignaturePad.clear();
     });
 
-    resizeCanvas(canvas, facsignaturePad);
+    //resizeCanvas(canvas, facsignaturePad);
 }
 
 function resizeCanvas(canvas: HTMLCanvasElement, facsignaturePad: SignaturePad) {
