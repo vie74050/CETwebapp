@@ -5,7 +5,8 @@
   "description": "CET Form",
   "main": "cetapp.js",
   "dependencies": {
-    "quill": "2.0.0-rc.3"
+    "quill": "2.0.0-rc.3",
+    "signature_pad": "^5.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.23.5",

@@ -2,6 +2,7 @@ import "./styles.css";
 import InitQuillEditors from "./components/quill-ta/quill-ta";
 import Initheader from "./components/header/header";
 import {InitCPISetup} from "./components/kap-table/kap-table";
+import {InitSignaturePad} from "./components/staticpages/signatures";
 
 Initheader();
 InitCPISetup();
@@ -61,3 +62,6 @@ document.querySelectorAll("section *").forEach((el: HTMLElement) => {
         }
     });
 });
+
+// Init signature pad for canvas
+InitSignaturePad();

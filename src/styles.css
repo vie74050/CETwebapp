@@ -94,7 +94,8 @@ section.open>h1::after {
     /* TODO: does not work on mobile browsers... need mobile handling?*/
     header .toolbar,
     .tooltip .tooltiptext,
-    div.ql-toolbar {
+    div.ql-toolbar,
+    .noprint {
         display: none;
     }
 
