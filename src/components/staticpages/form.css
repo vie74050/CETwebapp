@@ -55,6 +55,7 @@
 }
 .form .signature button {
     flex-grow: 1;
+    max-width: 60px;
 }
 .form .break {
     flex-basis: 100%;
