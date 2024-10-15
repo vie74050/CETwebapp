@@ -1,27 +1,19 @@
 import "./styles.css";
-import InitQuillEditors from "./components/quill-ta/quill-ta";
+
 import Initheader from "./components/header/header";
-import {InitCPISetup} from "./components/kap-table/kap-table";
-import {InitSignaturePad} from "./components/staticpages/signatures";
+import InitGeneralInfo from "./components/staticpages/generalinfo";
+import {InitKAPSectionSetup} from "./components/kap-table/kap-table";
+import InitQuillCommentsSection from "./components/staticpages/quill-ta-comments";
+import {InitSignatureSection} from "./components/staticpages/signatures";
+import InitQuillEditors from "./components/quill-ta/quill-ta";
 
 Initheader();
-InitCPISetup();
+InitGeneralInfo();
+InitKAPSectionSetup();
+InitQuillCommentsSection();
+InitSignatureSection();
 
-// Add general info form area after header
-const general_info_html = require("./components/staticpages/generalinfo.html").default;
-document.querySelector("header").insertAdjacentHTML("afterend", general_info_html);
-
-// Add learner text areas to all elements with class .kap
-const kap_ta_html = require("./components/quill-ta/quill-ta-learner.html").default;  
-document.querySelectorAll(".kap").forEach((el:HTMLElement) => {
-    el.insertAdjacentHTML("beforeend", kap_ta_html);   
-});
-
-// Add sections after kap sections
-const quill_ta_comments_html = require("./components/quill-ta/quill-ta-comments.html").default;  
-const signature_html = require("./components/staticpages/signatures.html").default;
-
-document.querySelector(".kap:last-of-type").insertAdjacentHTML("afterend", quill_ta_comments_html + signature_html);
+// init quill editors
 InitQuillEditors();
 
 // Add page events: section h1 toggle show/hide section
@@ -63,5 +55,3 @@ document.querySelectorAll("section *").forEach((el: HTMLElement) => {
     });
 });
 
-// Init signature pad for canvas
-InitSignaturePad();

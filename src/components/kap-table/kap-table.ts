@@ -1,6 +1,11 @@
 
-export function InitCPISetup() {
-     // for each kap-table create radio button set for each row:not(.subhead) td:nth-child(1) to td:nth-child(6) named tableid-rowid-tdid
+export function InitKAPSectionSetup() {
+     InitCPIContent();
+     Init_quill_ta_learner();
+}
+
+function InitCPIContent() {
+    // for each kap-table create radio button set for each row:not(.subhead) td:nth-child(1) to td:nth-child(6) named tableid-rowid-tdid
     document.querySelectorAll(".kap-table").forEach((table: HTMLElement, tableid: number) => {
         const rows = table.querySelectorAll("tbody tr:not(.subhead)");
         
@@ -53,4 +58,12 @@ function createCBSet(tablerow: string, value: string) {
 
     // replace all {{table-row}} with tablerow and all {{val}} with value
     return html.replace(/{{table-row}}/g, tablerow).replace(/{{val}}/g, value);
+}
+
+function Init_quill_ta_learner(){
+    // Add learner text areas to all elements with class .kap
+    const kap_ta_html = require("./quill-ta-kap-learner-comments.html").default;  
+    document.querySelectorAll(".kap").forEach((el:HTMLElement) => {
+        el.insertAdjacentHTML("beforeend", kap_ta_html);   
+    });   
 }
