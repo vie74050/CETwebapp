@@ -1,6 +1,6 @@
 /** header functionality */
 
-export default function Initheader() {
+export default function InitHeader() {
     // Add header section to body
     const header_html = require("./header.html").default;
     document.body.insertAdjacentHTML("afterbegin", header_html);

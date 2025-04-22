@@ -21,6 +21,9 @@ section {
     overflow: hidden;
     box-sizing: content-box;
     page-break-after: always;
+    &.open{
+        height: fit-content !important;
+    }
 }
 
 section>h1 {

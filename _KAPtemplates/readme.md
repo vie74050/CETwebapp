@@ -1,6 +1,7 @@
 # Development cli runners
 
-Helper node functions to create tempaltes for LH.
+Helper node functions to create KAP areas for D2L Learning Hub.
+Creates the variable KAP section(s) and injects into `./dist/index.html`.
 
 ## Structure
 

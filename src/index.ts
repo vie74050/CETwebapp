@@ -1,14 +1,16 @@
 import "./styles.css";
 
-import Initheader from "./components/header/header";
+import InitHeader from "./components/header/header";
+import InitInstructions from "./components/staticpages/instructions";
 import InitGeneralInfo from "./components/staticpages/generalinfo";
 import {InitKAPSectionSetup} from "./components/kap-table/kap-table";
 import InitQuillCommentsSection from "./components/staticpages/quill-ta-comments";
 import {InitSignatureSection} from "./components/staticpages/signatures";
 import InitQuillEditors from "./components/quill-ta/quill-ta";
 
-Initheader();
+InitHeader();
 InitGeneralInfo();
+InitInstructions();
 InitKAPSectionSetup();
 InitQuillCommentsSection();
 InitSignatureSection();
@@ -36,7 +38,6 @@ document.querySelectorAll("section>h1").forEach((el: HTMLElement) => {
             
         } else {
             parent.classList.add("open");
-            parent.style.height = "fit-content";//open
         }
 
     });
