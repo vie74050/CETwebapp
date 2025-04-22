@@ -6,7 +6,7 @@
     padding: 0.5em;
 }
 .form p label{
-    width:fit-content;
+    width: 120px;
     margin: 0.25em;
 }
 .form p label:first-child{
