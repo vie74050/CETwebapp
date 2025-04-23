@@ -1,6 +1,6 @@
 import SignaturePad from "signature_pad";
 
-export function InitSignatureSection() {
+export function CreateSignatureSection() {
     const signature_html = require("./signatures.html").default;
 
     document.querySelector("section:last-of-type").insertAdjacentHTML("afterend", signature_html);
@@ -8,7 +8,7 @@ export function InitSignatureSection() {
     InitSignaturePad();
 }
 
-function InitSignaturePad() {
+export function InitSignaturePad() {
     const canvas = document.querySelector("canvas#f-fac-signature") as HTMLCanvasElement;
     const facsignaturePad =  new SignaturePad(canvas, {
         minWidth: 0.3,

@@ -1,4 +1,4 @@
-export default function InitInstructions() {
+export default function CreateInstructions() {
     
     const header_elem = document.querySelector("header") as HTMLElement;
     const instructions_elem = document.querySelector("section#instructions") as HTMLElement;

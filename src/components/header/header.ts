@@ -1,10 +1,7 @@
 /** header functionality */
 
 export default function InitHeader() {
-    // Add header section to body
-    const header_html = require("./header.html").default;
-    document.body.insertAdjacentHTML("afterbegin", header_html);
-
+   
     // Handle header buttons
     const pdf_btn = document.querySelector("#pdf_btn") as HTMLElement;
     pdf_btn.addEventListener("click", printToPDF);
@@ -32,16 +29,26 @@ function saveData(){
             checkbox.setAttribute("checked", "true");
         } 
     });
+
+    // remove ql-toolbar from quill editor
+    const quill_toolbars = document.querySelectorAll(".ql-toolbar") as NodeListOf<HTMLElement>;
+    quill_toolbars.forEach((toolbar) => {   
+        toolbar.remove();
+    });
     
     // get all html content
-    
     const htmlContent = document.documentElement.innerHTML;
     const blob = new Blob([htmlContent], { type: "text/html" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
-   
+    const date = new Date();
+    const date_string = date.toDateString().replace(/ /g, "-").replace(/,/g, "");
+    const sid = document.querySelector("#sid") as HTMLElement;
+    const sid_value = sid.innerText? "_sid-" + sid.innerText : "";
+
     a.href = url;
-    a.download = "page.html";
+    a.download = "CET_"+ date_string +  sid_value +".html";
+
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

@@ -1,5 +1,5 @@
 
-export function InitKAPSectionSetup() {
+export function CreateKAPSectionSetup() {
      InitCPIContent();
      Init_quill_ta_learner();
 }
@@ -37,17 +37,6 @@ function InitCPIContent() {
                 }
                 
                 
-            });
-        });
-    });
-
-    // only one checkbox to be checked per row
-    document.querySelectorAll("input[type=checkbox]").forEach((input: HTMLInputElement) => {
-        input.addEventListener("click", () => {
-            const inputs = document.querySelectorAll(`input[name="${input.name}"]`);
-            console.log(input.name, input.value);
-            inputs.forEach((i: HTMLInputElement) => {
-                if (i !== input) i.checked = false;
             });
         });
     });
