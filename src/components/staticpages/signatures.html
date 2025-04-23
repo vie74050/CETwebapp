@@ -1,55 +1,61 @@
 <section class="form">
-    <h1>Sign Off</h1>
+  <h1>Sign Off</h1>
 
-    <h2>Midterm</h2>
-    <p class="ci">
-        <label>CI/Preceptor: </label>
-        <input type="text" id="m-ciname" />
-        <label>Date: </label>
-        <input type="date" id="m-cidate" />
-    </p>
-    <p class="learner">
-        <label>Learner: </label>
-        <input type="text" id="m-learnername" />
-        <label>Date: </label>
-        <input type="date" id="m-learnerdate" />
-    </p>    
+  <h2>Midterm</h2>
+  <p class="ci">
+    <label
+      >CI/Preceptor:
+      <span contenteditable="true" class="input text" id="m-ciname"></span
+    ></label>
 
-    <h2>Final</h2>
-    <p class="boxed">
-        <label>Final Evaluation: </label>
-        <select id="satisfactory" name ="satisfactory">
-            <option value="">--Please choose an option--</option>
-            <option value="y">Satisfactory</option>
-            <option value="n">Unsatisfactory</option>
-        </select>
-        
+    <label class="date">Date: <input type="date" id="m-cidate" /></label>
+  </p>
+  <p class="learner">
+    <label
+      >Learner:
+      <span contenteditable="true" class="input text" id="m-learnername"></span
+    ></label>
+
+    <label class="date">Date: <input type="date" id="m-learnerdate" /></label>
+  </p>
+
+  <h2>Final</h2>
+  <p class="boxed">
+    <label>Final Evaluation: </label>
+    <select id="satisfactory" name="satisfactory">
+      <option value="">--Please choose an option--</option>
+      <option value="y">Satisfactory</option>
+      <option value="n">Unsatisfactory</option>
+    </select>
+  </p>
+  <p class="ci">
+    <label
+      >CI/Preceptor:
+      <span contenteditable="true" class="input text" id="c-ciname"></span
+    ></label>
+    <label class="date">Date: <input type="date" id="f-cidate" /></label>
+  </p>
+  <p class="learner">
+    <label
+      >Learner:
+      <span contenteditable="true" class="input text" id="f-learnername"></span>
+    </label>
+
+    <label class="date">Date: <input type="date" id="f-learndate" /> </label>
+  </p>
+  <div class="faculty">
+    <p>
+      <label
+        >Faculty Support:
+        <span contenteditable="true" class="input text" id="f-facname"></span
+      ></label>
+
+      <label class="date">Date: <input type="date" id="f-facdate" /></label>
     </p>
-    <p class="ci">
-        <label>CI/Preceptor: </label>
-        <input type="text" id="f-ciname" />
-        <label>Date: </label>
-        <input type="date" id="f-cidate" />
-    </p>
-    <p class="learner">
-        <label>Learner: </label>
-        <input type="text" id="f-learname" />
-        <label>Date: </label>
-        <input type="date" id="f-learndate" />
-    </p>
-    <p class="faculty">
-        
-        <label>Faculty Support: </label>
-        <input type="text" id="f-facname" />
-        <label>Date: </label>
-        <input type="date" id="f-facdate" />
-        
-        <span class="break"></span>
-        <span class="signature">
-            <label>Signature: </label>
-            <canvas id="f-fac-signature" width="400" height="100"></canvas>
-            <button id="f-fac-clear" class="noprint">Clear</button>
-        </span>
-    </p>
-    
+    <span class="signature">
+      <label>Signature </label>
+      <canvas id="f-fac-signature" width="500" height="100"></canvas>
+      <button id="f-fac-clear" class="noprint">Clear</button>
+    </span>
+  </div>
 </section>

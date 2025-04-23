@@ -1,26 +1,35 @@
 .form p {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     text-align: left;
     padding: 0.5em;
 }
 .form p label{
-    width: 120px;
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    width: 49%;
     margin: 0.25em;
 }
-.form p label:first-child{
-    width:8em;
+
+.form .input {
+    display: inline-block;
+    max-width: 70%;
+    flex-grow: 1;
+    cursor: text;
+    background-color: field;
+    margin: 0 1em;
+    padding: 0.35em;
+    border-width: 2px;
+    border-style: inset;
+    border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
 }
-.form p input {
-    padding: 0.5em;
-}
-.form p input[type="text"] {
-    flex-grow: 1;    
-    margin-right: 0.5em;
+
+.form p label.date{
+    max-width: max-content;
 }
 .form p input[type="date"] {
-    width: 10em;
+    margin: 0 1em;
+    padding: 0.35em;
 }
 
 .form p.boxed{
@@ -45,8 +54,8 @@
 
 .form .signature {
     display: flex;
+    justify-content: center;
     width: 100%;
-    justify-content: start;
 }
 
 .form .signature canvas {
