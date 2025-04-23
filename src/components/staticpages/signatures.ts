@@ -1,6 +1,14 @@
 import SignaturePad from "signature_pad";
 
-export function InitSignaturePad() {
+export function InitSignatureSection() {
+    const signature_html = require("./signatures.html").default;
+
+    document.querySelector("section:last-of-type").insertAdjacentHTML("afterend", signature_html);
+
+    InitSignaturePad();
+}
+
+function InitSignaturePad() {
     const canvas = document.querySelector("canvas#f-fac-signature") as HTMLCanvasElement;
     const facsignaturePad =  new SignaturePad(canvas, {
         minWidth: 0.3,
@@ -13,8 +21,8 @@ export function InitSignaturePad() {
     });
 
     //resizeCanvas(canvas, facsignaturePad);
-}
 
+}
 function resizeCanvas(canvas: HTMLCanvasElement, facsignaturePad: SignaturePad) {
     const ratio =  Math.max(window.devicePixelRatio || 1, 1);
     // set canvas offsetWidth to canvas width to % of parent element
