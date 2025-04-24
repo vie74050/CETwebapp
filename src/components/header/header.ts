@@ -30,15 +30,38 @@ function saveData(){
         } 
     });
 
-    // remove ql-toolbar from quill editor
+    // get all input dates and save value
+    const dates = document.querySelectorAll("input[type='date']") as NodeListOf<HTMLInputElement>;
+    dates.forEach((date) => {
+        // if date is not empty, add class "checked" to parent div
+        if (date.value !== "") {
+            // add attribute "checked" to checkbox
+            date.setAttribute("value", date.value);
+        } 
+    });
+
+    // get all input select and set attribute "selected" to selected option
+    const selects = document.querySelectorAll("select") as NodeListOf<HTMLSelectElement>;
+    selects.forEach((select) => {
+        // if select is not empty, add class "checked" to parent div
+        if (select.value !== "") {
+            // add attribute "selected" to selected option
+            const selected_option = select.querySelector("option:checked") as HTMLOptionElement;
+            selected_option.setAttribute("selected", "true");
+        } 
+    });
+
+    // remove ql-toolbar from quill editor so it can be reinstantiated on load
     const quill_toolbars = document.querySelectorAll(".ql-toolbar") as NodeListOf<HTMLElement>;
     quill_toolbars.forEach((toolbar) => {   
         toolbar.remove();
     });
     
     // get all html content
-    const htmlContent = document.documentElement.innerHTML;
-    const blob = new Blob([htmlContent], { type: "text/html" });
+    const htmlContent = document.documentElement.innerHTML;   
+    // replace bundle.js with 'https://vie74050.github.io/CETwebapp/dist/bundle.js'
+    const new_htmlContent = htmlContent.replace(/bundle\.js/g, "https://vie74050.github.io/CETwebapp/dist/bundle.js");
+    const blob = new Blob([new_htmlContent], { type: "text/html" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     const date = new Date();
