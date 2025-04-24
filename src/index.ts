@@ -70,11 +70,21 @@ function InitUI(){
 
     // only one checkbox to be checked per row
     document.querySelectorAll("input[type=checkbox]").forEach((input: HTMLInputElement) => {
+
         input.addEventListener("click", () => {
             const inputs = document.querySelectorAll(`input[name="${input.name}"]`);
-            console.log(input.name, input.value);
+                        
             inputs.forEach((i: HTMLInputElement) => {
-                if (i !== input) i.checked = false;
+                i.removeAttribute("checked");
+                if (i !== input) {
+                    i.checked = false;
+                };
+
+                if (input.checked) {
+                    input.setAttribute("checked", "true");
+                } else {
+                    input.removeAttribute("checked");
+                }
             });
         });
     });

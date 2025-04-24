@@ -20,14 +20,6 @@ function saveData(){
         section.classList.add("open");
     });
 
-    // get all input checkboxes
-    const checkboxes = document.querySelectorAll("input[type='checkbox']") as NodeListOf<HTMLInputElement>;
-    checkboxes.forEach((checkbox) => {
-        // update checkbox value attribute
-        checkbox.setAttribute("checked", checkbox.checked? "true" : "false");
-         
-    });
-
     // get all input dates and save value
     const dates = document.querySelectorAll("input[type='date']") as NodeListOf<HTMLInputElement>;
     dates.forEach((date) => {
