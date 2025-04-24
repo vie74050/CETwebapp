@@ -23,11 +23,9 @@ function saveData(){
     // get all input checkboxes
     const checkboxes = document.querySelectorAll("input[type='checkbox']") as NodeListOf<HTMLInputElement>;
     checkboxes.forEach((checkbox) => {
-        // if checkbox is checked, add class "checked" to parent div
-        if (checkbox.checked) {
-            // add attribute "checked" to checkbox
-            checkbox.setAttribute("checked", "true");
-        } 
+        // update checkbox value attribute
+        checkbox.setAttribute("checked", checkbox.checked? "true" : "false");
+         
     });
 
     // get all input dates and save value
@@ -59,8 +57,11 @@ function saveData(){
     
     // get all html content
     const htmlContent = document.documentElement.innerHTML;   
-    // replace bundle.js with 'https://vie74050.github.io/CETwebapp/dist/bundle.js'
-    const new_htmlContent = htmlContent.replace(/bundle\.js/g, "https://vie74050.github.io/CETwebapp/dist/bundle.js");
+    // replace src="bundle.js" with src="https://vie74050.github.io/CETwebapp/dist/bundle.js"
+
+    
+    const new_htmlContent = htmlContent.replace(/\"bundle\.js\"/g, "'https://vie74050.github.io/CETwebapp/dist/bundle.js'");
+
     const blob = new Blob([new_htmlContent], { type: "text/html" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
