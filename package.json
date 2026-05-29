@@ -18,7 +18,7 @@
     "css-loader": "^6.9.1",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.0",
-    "inquirer": "^10.2.2",
+    "inquirer": "^14.0.0",
     "quill": "2.0.0-rc.3",
     "style-loader": "^3.3.4",
     "ts-loader": "^9.5.1",
